@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main ()
+{
+    int n,i, temp, j;
+    cout << " enter the number of elements to be sorted ";
+    cin >>n;
+    int a[n];
+    for (i=0;i<n;i++)
+    {
+    cout<<" The "<<i+1 <<" element is ";
+    cin >> a[i];
+    cout<< endl;
+    }
+    cout<<" The array is as follows ";
+    for (i=0;i<n;i++)
+    {
+    cout<<a[i]<<" ";
+    }
+//sorting starts from here
+
+for (i=0;i<n;i++)
+{
+    for (j=i+1;j<n;j++)
+    {
+        if (a[i]>a[j])
+    {
+    temp=a[i];
+    a[i]= a[j];
+    a[j]= temp;
+    }
+    }
+}
+cout <<" \n  The sorted array is ";
+for (i=0;i<n;i++)
+    {
+    cout<<a[i]<<" ";
+    }
+}
