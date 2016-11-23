@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+
+ostream &testout (ostream &output)
+{
+        cout <<"good name ";
+        return output;
+}
+
+istream &testin (istream &input)
+{
+    cout <<"enter the name ";
+    return input;
+}
+
+
+int main()
+{
+string name;
+cin>>testin>>name;
+cout << testout<<name;
+return 0;
+}
