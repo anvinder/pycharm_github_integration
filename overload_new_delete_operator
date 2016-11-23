@@ -1,0 +1,65 @@
+#include <stdlib.h>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+using namespace std;
+
+class student {
+
+public:
+    int age;
+    string name;
+    student ()
+    {
+        age=0;
+        name= "no name";
+    }
+
+    student (int iage, string iname)
+    {
+        this->age= iage;
+        this->name= iname;
+    }
+
+  void display()
+  {
+      cout <<"name is "<<name<<" age is "<< age<<endl;
+  }
+
+    void *operator new(size_t size)
+    {
+    void *pointer;
+    cout <<"overloaded new operator is of size"<<size<<endl;
+    pointer= malloc(size);
+    if (!pointer)
+    {
+      bad_alloc ba;
+      throw ba;
+    }
+    return pointer;
+    }
+
+    void operator delete (void *pointer)
+    {
+        cout <<"overloaded delete"<<endl;
+        free(pointer);
+    }
+};
+
+
+
+int main ()
+{
+    student *a;
+    try
+    {
+        a = new student (25,"anvinder");
+        a->display();
+        delete a;
+    }
+    catch (bad_alloc b)
+    {
+        cout <<b.what()<<endl;
+    }
+    return 0;
+}
