@@ -1,0 +1,54 @@
+#include <stdlib.h>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+using namespace std;
+
+class person
+{
+public :
+    int age;
+    string *name;
+  //  person ()
+   // {
+   //     age=0;
+   //     *name ="no name";
+  //  }
+
+    person (string name, int age)
+    {
+        this->name= new string(name);
+        this->age= age;
+    }
+
+    person (const person &p)
+    {
+        name= new string (*p.name);
+        age=p.age;
+    }
+
+    void changedetails(string name, int age)
+    {
+        *(this->name)= name;
+        this->age= age;
+    }
+
+    void display()
+    {
+        cout <<"my name is " <<*name<<" and age is " <<age<<endl;
+    }
+
+};
+
+
+int main()
+{
+person p1("anvinder", 25);
+p1.display();
+person p2=p1;
+p2.display();
+p2.changedetails("anvinder singh", 26);
+p2.display();
+p1.display();
+return 0;
+}
