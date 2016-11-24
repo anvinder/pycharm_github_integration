@@ -1,0 +1,54 @@
+#include <stdlib.h>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <iomanip>
+#include <fstream>
+#include <cstring>
+using namespace std;
+
+//istream &read ( char *buf, streamsize num)
+//ostream &write (const char *buf, streamsize num)
+class person {
+char name[80];
+int age;
+public:
+    person ()
+    {
+      strcpy(name, "no name");
+       age=0;
+    }
+
+    person (char *name, int age)
+    {
+        strcpy(this->name, name);
+        this->age=age;
+    }
+
+    void display()
+    {
+        cout << "my name is "<<name<<" and age is "<<age<<endl;
+    }
+};
+
+
+int main ()
+{
+    person p("anvinder", 25);
+    fstream file("test.bin", ios::in|ios::out|ios::binary|ios::trunc);
+    if (!file.is_open())
+    {
+        cout <<"file not open- error";
+    }
+    else
+    {
+        file.write((char *)&p, sizeof(person));
+        file.seekg(0);
+        p.display();
+
+        person s;
+        file.read((char *)&s, sizeof(person));
+        s.display();
+    }
+    return 0;
+}
