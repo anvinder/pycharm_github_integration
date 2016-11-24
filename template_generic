@@ -1,0 +1,19 @@
+#include <stdlib.h>
+#include <iostream>
+using namespace std;
+
+template<typename t1, typename t2> void display (t1 x,t2 y)
+{
+    cout <<" two types display the values as follows : "<<x <<" , "<< y<<endl;
+}
+
+int main ()
+{
+
+display (25, "anvinder");
+display (25, 28);
+display ('c', 30 );
+display ("test", 28.5);
+
+return 0;
+}
