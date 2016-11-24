@@ -1,0 +1,29 @@
+#include <stdlib.h>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ifstream file;
+    string data;
+    file.open("anvinder.txt", ios::in|ios::out|ios::app);
+    if(!file.is_open())
+    {
+        cout <<"file not found";
+    }
+    else
+    {
+    cout <<"reading from text file"<<endl;
+    while(file.good())  // the while loop is used to print the multiple lines which are in the file.
+        //string data; file.good checks if the end of file has been reached.
+   {
+    getline(file, data);
+    cout <<data<<endl;
+    }
+    }
+return 0;
+}
