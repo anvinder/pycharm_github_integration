@@ -1,0 +1,36 @@
+#include <stdlib.h>
+#include <iostream>
+using namespace std;
+
+namespace appversion
+{
+    namespace version1
+    {
+        void display()
+        {
+        cout <<"software version 1 "<<endl;
+        }
+    }
+    namespace version2
+    {
+        void display()
+        {
+        cout <<"software version 2 "<<endl;
+        }
+    }
+  inline  namespace version3   // if this is made inline then it behaves as if it is a function of the appversion itself not of "version 3"
+    {
+        void display()
+        {
+        cout <<"software version 3 "<<endl;
+        }
+    }
+
+}
+int main ()
+{
+appversion::display();   // becasue we used inline so we didnt have to sue the whole syntax as below for calling the version 3 namespace display function.
+appversion::version2::display();
+appversion::version1::display();
+    return 0;
+}
