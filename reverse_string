@@ -1,0 +1,27 @@
+#include<stdlib.h>
+#include<string>
+#include<iostream>
+#include<cstring>
+
+using namespace std;
+
+void rstr(string s)
+{
+    int len=s.length();
+    cout <<endl<<"length of string is "<<len;
+    for (int i=0;i<len/2;++i)
+    {
+        swap (s[len-i-1], s[i]);
+    }
+    cout <<"reversed string is "<<s;
+}
+
+int main ()
+{
+    string s;
+    cout <<"enter the string ";
+    cin>>s;
+    cout<<"you entered "<<s;
+    rstr(s);
+    return 0;
+}
