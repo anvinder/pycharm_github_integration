@@ -1,0 +1,18 @@
+#include<iostream>
+#include<exception>
+#include<stdlib.h>
+using namespace  std;
+
+int main ()
+{
+    int x;
+    x=1024;
+ if (((x % 2) == 0) && (x > 1))
+ {
+   x =x/ 2;
+ cout <<"divisible by power of 2";
+ }
+
+    cout <<"NO";
+ return 0;
+}
