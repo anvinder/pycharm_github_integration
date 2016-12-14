@@ -1,0 +1,27 @@
+#include<stdlib.h>
+#include<iostream>
+#include<streambuf>
+#include<string>
+#include<string.h>
+#include<cstring>
+#include<vector>
+#include <map>
+using namespace std;
+
+
+int main()
+{
+    int i;
+int a[]={1,2,4,5,7,8,9,10};
+for (int i=0;i<8;i++)
+{
+    if (a[i+1]-a[i]==1)
+    {
+
+        cout <<"no missing number"<<endl;
+    }
+    else
+    cout <<"missing number is "<<a[i]+1<<endl;
+}
+    return 0;
+}
