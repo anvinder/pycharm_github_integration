@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<iostream>
+#include <string>
+
+using namespace std;
+
+int factorial (int n)
+{
+while (n>1)
+        return n* factorial(n-1);
+}
+
+int main ()
+{
+    int number;
+    cout <<"number for factorial: ";
+    cin>>number;
+    cout<<factorial (number);
+    return 0;
+
+}
