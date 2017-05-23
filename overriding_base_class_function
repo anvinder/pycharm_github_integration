@@ -20,6 +20,9 @@ public:
     {
         cout<<" child class called";
     }
+    //you could also write
+    //father::introduce();
+    // rather than writing it in the main class. 
 };
 
 
