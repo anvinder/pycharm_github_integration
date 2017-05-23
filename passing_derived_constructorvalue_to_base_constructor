@@ -1,0 +1,38 @@
+#include<iostream>
+#include<stdlib.h>
+#include<stdio.h>
+
+using namespace std;
+
+class father
+{
+public:
+int height;
+father(int h)
+{
+    cout<<"base constructor called."<<endl;
+    height=h;
+}
+
+};
+
+class child: father
+{
+public:
+    child(int x):father(x)
+    {
+        cout<<"child constructor called"<<endl;
+    }
+    void display()
+    {
+        cout <<"the height is: "<< height;
+    }
+};
+
+int main ()
+{
+child c(25);
+
+c.display();
+    return 0;
+}
