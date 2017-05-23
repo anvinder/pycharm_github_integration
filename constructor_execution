@@ -1,0 +1,37 @@
+#include<iostream>
+#include<stdlib.h>
+#include<stdio.h>
+
+using namespace std;
+
+class person
+{
+public:
+    person()
+    {
+        cout<<"Base constructor called"<<endl;
+    }
+    ~person()
+    {
+        cout<<"Base destructor called"<<endl;
+    }
+};
+
+class student : public person
+{
+public:
+    student()
+    {
+        cout<<"derived constructor"<<endl;
+    }
+    ~student()
+    {
+        cout<<"derived destructor called"<<endl;
+    }
+};
+
+int main ()
+{
+    student s;
+    return 0;
+}
