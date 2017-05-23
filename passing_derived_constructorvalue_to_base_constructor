@@ -13,25 +13,36 @@ father(int h)
     cout<<"base constructor called."<<endl;
     height=h;
 }
-
 };
 
-class child: father
+class mother
 {
 public:
-    child(int x):father(x)
+    int weight;
+    mother(int w)
+    {
+        cout<<"2nd base class constructor called"<<endl;
+        weight= w;
+    }
+};
+
+class child: father, mother
+{
+public:
+    child(int x, int y):father(x), mother(y)
     {
         cout<<"child constructor called"<<endl;
     }
     void display()
     {
-        cout <<"the height is: "<< height;
+        cout <<"the height is: "<< height<<endl;
+        cout<<"weight is: "<<weight<<endl;
     }
 };
 
 int main ()
 {
-child c(25);
+child c(175, 54);
 
 c.display();
     return 0;
