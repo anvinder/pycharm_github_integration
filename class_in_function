@@ -1,0 +1,27 @@
+#include <iostream>
+#include<stdio.h>
+
+using namespace std;
+
+void test()
+{
+    class self
+    {
+        public:
+        string name;
+        int age;
+        void display()
+        {
+            cout <<"name is "<<name<<", age is: "<<age<<endl;
+        }
+    };
+    self s;
+    s.name = "anvinder";
+    s.age = 24;
+    s.display();
+}
+int main ()
+{
+    test();
+    return 0;
+}
