@@ -1,0 +1,36 @@
+#include <iostream>
+#include<stdio.h>
+#include<exception>
+#include<stdexcept>
+
+using namespace std;
+
+
+int main ()
+{
+
+ try
+ {
+    //throw "char error code :21";
+    try
+    {
+        throw "char exception";
+    }
+    catch(const char  *e)
+    {
+        cout<<"char type error-> inner block :"<<e<<endl;
+        cout<<"re-throwing exception "<<endl;
+        throw;
+    }
+ }
+ catch(const char *f)
+ {
+     cout <<"char type error-> outer block "<<f<<endl;
+ }
+ catch(...)
+ {
+     cout<<endl;
+     cout<<"unknown exception type : "<<endl;
+ }
+    return 0;
+}
