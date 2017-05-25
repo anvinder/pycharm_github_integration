@@ -1,28 +1,27 @@
-#include <stdlib.h>
 #include <iostream>
-#include <stdexcept>
-#include <string>
-#include <iomanip>
+#include<iomanip>
+#include<stdio.h>
+#include<stdlib.h>
+
 using namespace std;
 
-
-ostream &testout (ostream &output)
+ostream &choice(ostream &output)
 {
-        cout <<"good name ";
-        return output;
+    output<<"-->";
+    return output;
 }
 
-istream &testin (istream &input)
+istream &getname(istream &input)
 {
-    cout <<"enter the name ";
+    cout<<"name please: ";
     return input;
 }
 
-
-int main()
+int main ()
 {
+//cout<<setw(10)<<setfill('*')<<10<<endl;
 string name;
-cin>>testin>>name;
-cout << testout<<name;
-return 0;
+cin>>getname>>name;
+cout << choice << name;
+    return 0;
 }
