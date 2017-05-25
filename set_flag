@@ -1,0 +1,19 @@
+#include <iostream>
+#include<stdio.h>
+#include<exception>
+#include<stdexcept>
+
+using namespace std;
+
+int main ()
+{
+float a=100;
+//cout.setf(ios::showpos | ios::showpoint);
+//or you can also write
+auto flags = ios::showpos| ios::showpoint|  ios::showbase;
+cout.flags(flags);
+cout <<a<<endl;
+//cout.unsetf(ios:: showpos);
+//cout<<a<<endl;
+    return 0;
+}
