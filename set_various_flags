@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+cout.precision(6);
+cout <<100.952846<<endl;
+
+cout.width(10);
+cout<<"hi"<<endl;
+
+cout.width(10);
+cout<<"hi i would like to introduce myself."<<endl;
+// no 10 spaces were used now coz the number of characters to display is more than 10.
+
+cout.fill('*');
+cout.width(10);
+cout<<"hi"<<endl;
+
+cout.setf(ios::left);
+cout.fill('*');
+cout.width(10);
+cout<<"hi"<<endl;
+
+    return 0;
+}
