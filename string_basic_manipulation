@@ -26,5 +26,6 @@ cout<<data.erase(0, 16)<<endl;
 //erase 16 letters from 0th position.
 
 cout<<data.erase(7, 9)<<endl;
+// erase from 7th letter, the coming 9 letters.
     return 0;
 }
