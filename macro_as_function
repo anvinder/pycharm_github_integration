@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+#define ABS(number) ((number)<0 ? -(number): (number))
+
+int main ()
+{
+    cout<<ABS(-27);
+
+    return 0;
+}
