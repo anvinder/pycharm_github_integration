@@ -1,0 +1,15 @@
+#include <iostream>
+#define one 1
+#define two one+one
+#define three two+one
+#define welcome "Welcome to the world\
+of this earth"
+using namespace std;
+
+int main ()
+{
+cout<<three<<endl;
+cout<<welcome;
+
+    return 0;
+}
