@@ -10,7 +10,12 @@ cout<<"current date is: "<<__DATE__<<endl;
 cout<<"current time is: "<<__TIME__<<endl;
 cout<<"current stdc is: "<<__STDC__<<endl;//std c++code
 cout<<"current c++ is: "<<__cplusplus<<endl;
-// the above line means, if the output is 6 digits then the 
+// the above line means, if the output is 6 digits then the
 // compiler is conforming to std c++. If 5 digits then C.
+
+#line 1000 "anvi.txt" // this changes file and line location
+cout<<endl;
+cout<<"current line is: "<<__LINE__<<endl;
+cout<<"current file is: "<<__FILE__<<endl;
  return 0;
 }
