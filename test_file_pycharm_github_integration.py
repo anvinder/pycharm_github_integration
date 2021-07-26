@@ -10,3 +10,5 @@
 # User needs to create a repo on github and then commit changes from local machine.
 
 # Editing only on github to see diff in local copy and the one in the repo
+
+# Use fetch to get this change onto the local repo
