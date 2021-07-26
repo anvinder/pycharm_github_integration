@@ -9,4 +9,4 @@
 # If there is a local repo but there is no repo on git then the local changes cannot be pushed to github.
 # User needs to create a repo on github and then commit changes from local machine.
 
-#
+# Editing only on github to see diff in local copy and the one in the repo
